@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>管理员模式 · 分析与数据管理</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <link rel="stylesheet" href="assets/leaflet/leaflet.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="wrap">
+      <div class="brand"><div class="logo"></div><div class="title">管理员模式</div></div>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="map.html">地图</a>
+        <a href="emergency.html">紧急模式</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- 分析面板（移到最上方） -->
+    <section class="card">
+      <h1>分析面板</h1>
+      <p class="meta">基础统计与质量评估，基于当前数据（优先管理员本地数据）。</p>
+
+      <div class="grid">
+        <div class="card">
+          <h2>总体概览</h2>
+          <ul id="ana-summary" class="meta" style="list-style:none;padding-left:0;line-height:1.9"></ul>
+        </div>
+        <div class="card">
+          <h2>状态分布</h2>
+          <ul id="ana-status" class="meta" style="list-style:none;padding-left:0;line-height:1.9"></ul>
+        </div>
+      </div>
+      <!-- 使用统计 -->
+<div class="grid section">
+  <div class="card">
+    <h2>使用统计</h2>
+    <ul id="ana-usage-summary" class="meta" style="list-style:none;padding-left:0;line-height:1.9"></ul>
+  </div>
+  <div class="card">
+    <h2>高价值点位 Top 10（按使用次数）</h2>
+    <ol id="ana-usage-top" class="meta" style="padding-left:20px;line-height:1.9"></ol>
+  </div>
+</div>
+
+      <div class="grid section">
+        <div class="card">
+          <h2>建筑 Top 10（按点位数量）</h2>
+          <ol id="ana-topbuildings" class="meta" style="padding-left:20px;line-height:1.9"></ol>
+        </div>
+        <div class="card">
+          <h2>数据新鲜度</h2>
+          <p class="note">依据 last_inspection_at 判断，超过 180 天视为“需复核”。</p>
+          <ul id="ana-freshness" class="meta" style="list-style:none;padding-left:0;line-height:1.9"></ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="tools flex row wrap gap-8 items-center">
+          <button class="btn" id="btn-data-health">数据体检（校验与去重）</button>
+          <button class="btn" id="btn-open-map-coverage">打开地图覆盖圈层（100m）</button>
+          <button class="btn" id="btn-open-map-grid">打开地图网格分布（基础）</button>
+        </div>
+        <div id="ana-check" class="meta" style="margin-top:10px; line-height:1.9"></div>
+        <p class="note">覆盖圈层与网格分布将在地图页以叠加图层显示，默认关闭。</p>
+      </div>
+    </section>
+
+    <!-- 数据管理（含编辑面板 + 取点地图） -->
+    <section class="card section">
+      <h1>数据管理</h1>
+      <p class="meta">维护 AED 点位：增删改查、导入/导出、拾取坐标、图片管理。</p>
+
+      <div class="tools flex row wrap gap-8 items-center">
+        <button class="btn" id="btn-load-server">从服务器加载 aed.json</button>
+        <button class="btn" id="btn-import">导入 JSON（本地文件）</button>
+        <button class="btn" id="btn-export">导出 JSON（下载）</button>
+        <button class="btn" id="btn-apply-preview">应用到地图预览</button>
+        <button class="btn accent" id="btn-add">新增点位</button>
+      </div>
+
+      <div class="section">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>名称</th>
+              <th>建筑</th>
+              <th>楼层</th>
+              <th>状态</th>
+              <th>经纬度</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="admin-table-body"></tbody>
+        </table>
+        <p class="note" id="table-note" style="margin-top:8px"></p>
+      </div>
+
+      <div id="editorPanel" class="card" style="margin-top:16px; display:none">
+        <h2 id="editorTitle">编辑点位</h2>
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+          <div><label class="meta">ID（自动）</label><input id="f-id" class="input" placeholder="自动生成" readonly /></div>
+          <div><label class="meta">名称</label><input id="f-name" class="input" placeholder="如：图书馆东门 AED" /></div>
+          <div><label class="meta">建筑</label><input id="f-building" class="input" placeholder="如：图书馆" /></div>
+          <div><label class="meta">楼层</label><input id="f-floor" class="input" placeholder="如：1F" /></div>
+          <div><label class="meta">房间/位置</label><input id="f-room" class="input" placeholder="如：东门内" /></div>
+          <div>
+            <label class="meta">状态</label>
+            <select id="f-status" class="select">
+              <option value="available">available（可用）</option>
+              <option value="maintenance">maintenance（维护中）</option>
+            </select>
+          </div>
+          <div><label class="meta">纬度 lat（WGS84）</label><input id="f-lat" class="input" placeholder="30.54..." /></div>
+          <div><label class="meta">经度 lng（WGS84）</label><input id="f-lng" class="input" placeholder="114.36..." /></div>
+          <div><label class="meta">开放时间</label><input id="f-open" class="input" placeholder="如：08:00-22:00/全天" /></div>
+          <div><label class="meta">上次巡检日期</label><input id="f-inspect" class="input" type="date" /></div>
+          <!-- 使用次数/救助人数/最近一次使用（新增三项，与其它字段一起保存） -->
+<div class="field-group">
+  <label class="meta" for="edit-used_count">使用次数（used_count）</label>
+  <input id="edit-used_count" class="input" type="number" min="0" step="1" value="0"/>
+
+  <label class="meta" for="edit-rescued_count" style="margin-top:8px">救助人数（rescued_count）</label>
+  <input id="edit-rescued_count" class="input" type="number" min="0" step="1" value="0"/>
+
+  <label class="meta" for="edit-last_used_at" style="margin-top:8px">最近一次使用日期（last_used_at，YYYY-MM-DD，可留空）</label>
+  <input id="edit-last_used_at" class="input" type="date"/>
+
+  <!-- 可选：一键 +1 并把最近一次使用设为今天 -->
+  <div class="tools" style="margin-top:8px">
+    <button id="btn-use-plus1" class="btn">+1 次使用（并把最近一次使用设为今天）</button>
+  </div>
+</div>
+          <div>
+            <label class="meta">无障碍（电梯/坡道）</label>
+            <div class="tools"><label><input type="checkbox" id="f-elevator"/> 电梯</label><label><input type="checkbox" id="f-ramp"/> 坡道</label></div>
+          </div>
+          <div style="grid-column:1/-1"><label class="meta">备注</label><textarea id="f-notes" class="input" rows="3" placeholder="备注说明"></textarea></div>
+          <div style="grid-column:1/-1"><label class="meta">图片相对路径（逗号分隔）</label><input id="f-photos" class="input" placeholder="images/aed1.jpg, images/aed2.jpg"/></div>
+        </div>
+
+        <div class="section">
+          <h3>拾取坐标</h3>
+          <p class="note">点击地图设置位置（高德底图；内部自动将 GCJ‑02 转为 WGS84 写入表单）。</p>
+          <div id="pickMap" class="map" style="height:320px"></div>
+          <div class="tools" style="margin-top:8px">
+            <button class="btn" id="btn-pick-locate">定位我的位置</button>
+            <button class="btn" id="btn-pick-center">用当前地图中心写入经纬度</button>
+          </div>
+        </div>
+
+        <div class="tools" style="margin-top:12px">
+          <button class="btn primary" id="btn-save">保存</button>
+          <button class="btn" id="btn-cancel">取消</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/leaflet/leaflet.js"></script>
+  <script src="assets/admin-manage.js"></script>
+  <script src="assets/admin-analytics.js"></script>
+</body>
+</html>

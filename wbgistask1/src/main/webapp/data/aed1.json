@@ -1,0 +1,1960 @@
+[
+  {
+    "id": "whu_aed_001",
+    "name": "医学部学生1舍1单元一楼进出口左侧",
+    "building": "医学部学生1舍1单元",
+    "floor": "一楼",
+    "room": "进出口左侧",
+    "status": "available",
+    "lat": 30.557254,
+    "lng": 114.35167,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_002",
+    "name": "医学部学生1舍2单元一楼进出口左侧",
+    "building": "医学部学生1舍2单元",
+    "floor": "一楼",
+    "room": "进出口左侧",
+    "status": "available",
+    "lat": 30.55729,
+    "lng": 114.351943,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_003",
+    "name": "医学部学生3A舍一楼进出口右侧",
+    "building": "医学部学生3A舍",
+    "floor": "一楼",
+    "room": "进出口右侧",
+    "status": "available",
+    "lat": 30.555054,
+    "lng": 114.351782,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_004",
+    "name": "医学部学生3B舍一楼进出口右侧",
+    "building": "医学部学生3B舍",
+    "floor": "一楼",
+    "room": "进出口右侧",
+    "status": "available",
+    "lat": 30.555125,
+    "lng": 114.351434,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_005",
+    "name": "医学部学生5舍一楼进出口外侧",
+    "building": "医学部学生5舍",
+    "floor": "一楼",
+    "room": "进出口外侧",
+    "status": "available",
+    "lat": 30.554719,
+    "lng": 114.351601,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_006",
+    "name": "医学部学生10舍一楼进出口",
+    "building": "医学部学生10舍",
+    "floor": "一楼",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.558871,
+    "lng": 114.351097,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_007",
+    "name": "医学部学生12舍一单元入口外墙",
+    "building": "医学部学生12舍一单元",
+    "floor": "一楼",
+    "room": "入口外墙",
+    "status": "available",
+    "lat": 30.558616,
+    "lng": 114.348916,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_008",
+    "name": "医学部2号楼（东实验楼)一楼大厅",
+    "building": "医学部2号楼（东实验楼)",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.555422,
+    "lng": 114.351553,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_009",
+    "name": "继续教育学院一楼大厅",
+    "building": "继续教育学院",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.527275,
+    "lng": 114.355316,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_010",
+    "name": "医学部离退休活动中心值班室",
+    "building": "医学部离退休活动中心",
+    "floor": "一楼",
+    "room": "值班室",
+    "status": "available",
+    "lat": 30.556,
+    "lng": 114.343143,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_011",
+    "name": "幼儿园四分园值班室",
+    "building": "幼儿园四分园",
+    "floor": "一楼",
+    "room": "值班室",
+    "status": "available",
+    "lat": 30.556203,
+    "lng": 114.343383,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_012",
+    "name": "武大二附小医学部校区医务室武大二附小医学部校区医务室",
+    "building": "武大二附小医学部校区",
+    "floor": "一楼",
+    "room": "医务室",
+    "status": "available",
+    "lat": 30.557461,
+    "lng": 114.344475,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_013",
+    "name": "杏林一食堂一楼大厅电梯口",
+    "building": "杏林一食堂",
+    "floor": "一楼",
+    "room": "大厅电梯口",
+    "status": "available",
+    "lat": 30.556317,
+    "lng": 114.352104,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_014",
+    "name": "珞珈山公寓男生公寓一楼进出口",
+    "building": "珞珈山公寓男生公寓",
+    "floor": "一楼",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.533196,
+    "lng": 114.369619,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_015",
+    "name": "珞珈山公寓女生公寓一楼进出口",
+    "building": "珞珈山公寓女生公寓",
+    "floor": "一楼",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.533023,
+    "lng": 114.370149,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_016",
+    "name": "信息学部学生2舍二楼进出口右侧",
+    "building": "信息学部学生2舍",
+    "floor": "二楼",
+    "room": "进出口右侧",
+    "status": "available",
+    "lat": 30.53019,
+    "lng": 114.354694,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_017",
+    "name": "信息学部学生3舍一楼大厅",
+    "building": "信息学部学生3舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.530574,
+    "lng": 114.354641,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_018",
+    "name": "信息学部学生4舍一楼值班室",
+    "building": "信息学部学生4舍",
+    "floor": "一楼",
+    "room": "值班室",
+    "status": "available",
+    "lat": 30.531076,
+    "lng": 114.354651,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_019",
+    "name": "信息学部学生5舍一楼大厅",
+    "building": "信息学部学生5舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.53135,
+    "lng": 114.354678,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_020",
+    "name": "信息学部学生6舍二楼进出口右侧",
+    "building": "信息学部学生6舍",
+    "floor": "二楼",
+    "room": "进出口右侧",
+    "status": "available",
+    "lat": 30.530181,
+    "lng": 114.353725,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_021",
+    "name": "信息学部学生7舍一楼大厅",
+    "building": "信息学部学生7舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.528832,
+    "lng": 114.353666,
+    "open_hours": "08:00-22:00",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "elevator": false,
+      "ramp": false
+    },
+    "notes": "有图片",
+    "photos": [
+      "images/21.jpg"
+    ]
+  },
+  {
+    "id": "whu_aed_022",
+    "name": "信息学部学生8舍一楼大厅",
+    "building": "信息学部学生8舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.528435,
+    "lng": 114.353634,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_023",
+    "name": "信息学部学生9舍一楼大厅",
+    "building": "信息学部学生9舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.528441,
+    "lng": 114.352766,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_024",
+    "name": "信息学部学生10舍一楼大厅",
+    "building": "信息学部学生10舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.52888,
+    "lng": 114.352889,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_025",
+    "name": "信息学部学生11舍一楼大厅",
+    "building": "信息学部学生11舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.530173,
+    "lng": 114.352787,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_026",
+    "name": "信息学部学生12舍一楼大厅",
+    "building": "信息学部学生12舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.530441,
+    "lng": 114.352744,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_027",
+    "name": "信息学部学生13舍一楼大厅",
+    "building": "信息学部学生13舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.530729,
+    "lng": 114.352755,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_028",
+    "name": "信息学部学生14舍一楼大厅",
+    "building": "信息学部学生14舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.531011,
+    "lng": 114.352749,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_029",
+    "name": "信息学部学生15舍一楼大厅",
+    "building": "信息学部学生15舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.529381,
+    "lng": 114.351069,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_030",
+    "name": "信息学部学生15舍四楼走廊",
+    "building": "信息学部学生15舍",
+    "floor": "四楼",
+    "room": "走廊",
+    "status": "available",
+    "lat": 30.530749,
+    "lng": 114.351999,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_031",
+    "name": "信息学部学生17舍一楼大厅",
+    "building": "信息学部学生17舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.530956,
+    "lng": 114.353933,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_032",
+    "name": "信息学部学生17舍九楼电梯旁",
+    "building": "信息学部学生17舍",
+    "floor": "九楼",
+    "room": "电梯旁",
+    "status": "available",
+    "lat": 30.531352,
+    "lng": 114.353811,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_033",
+    "name": "信息学部学生18舍一楼大厅值班室",
+    "building": "信息学部学生18舍",
+    "floor": "一楼",
+    "room": "大厅值班室",
+    "status": "available",
+    "lat": 30.531338,
+    "lng": 114.353997,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_034",
+    "name": "信息学部学生18舍八楼电梯旁",
+    "building": "信息学部学生18舍",
+    "floor": "八楼",
+    "room": "电梯旁",
+    "status": "available",
+    "lat": 30.531338,
+    "lng": 114.353997,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_035",
+    "name": "信息学部学生19舍一楼大厅",
+    "building": "信息学部学生19舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.530971,
+    "lng": 114.352909,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_036",
+    "name": "信息学部学生20舍一楼大厅",
+    "building": "信息学部学生20舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.533514,
+    "lng": 114.353597,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_037",
+    "name": "信息学部学生23舍四楼走廊",
+    "building": "信息学部学生23舍",
+    "floor": "四楼",
+    "room": "走廊",
+    "status": "available",
+    "lat": 30.532309,
+    "lng": 114.351422,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_038",
+    "name": "信息学部一教一楼对面值班处",
+    "building": "信息学部一教",
+    "floor": "一楼",
+    "room": "对面值班处",
+    "status": "available",
+    "lat": 30.528808,
+    "lng": 114.35561,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_039",
+    "name": "信息学部附3联体楼一楼对面值班室对面",
+    "building": "信息学部附3联体楼",
+    "floor": "一楼",
+    "room": "对面值班室对面",
+    "status": "available",
+    "lat": 30.528746,
+    "lng": 114.354452,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_040",
+    "name": "信息学部学生2教侧门消防应急灯下方",
+    "building": "信息学部学生2教",
+    "floor": "侧门",
+    "room": "消防应急灯下方",
+    "status": "available",
+    "lat": 30.528754,
+    "lng": 114.356652,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_041",
+    "name": "信息学部B4教学楼继续教育学院标牌旁边过道",
+    "building": "信息学部B4教学楼继续教育学院",
+    "floor": "标牌旁边",
+    "room": "过道",
+    "status": "available",
+    "lat": 30.527564,
+    "lng": 114.354433,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_042",
+    "name": "信息学部一食堂一楼大厅厕所消防柜子旁",
+    "building": "信息学部一食堂",
+    "floor": "一楼",
+    "room": "大厅厕所消防柜子旁",
+    "status": "available",
+    "lat": 30.530617,
+    "lng": 114.353685,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_043",
+    "name": "信息学部四食堂一楼大厅中间出入口旁消防照明灯下方",
+    "building": "信息学部四食堂",
+    "floor": "一楼",
+    "room": "大厅中间出入口旁消防照明灯下方",
+    "status": "available",
+    "lat": 30.529442,
+    "lng": 114.353297,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_044",
+    "name": "校史馆值班室",
+    "building": "校史馆",
+    "floor": "值班室",
+    "room": "值班室",
+    "status": "available",
+    "lat": 30.542386,
+    "lng": 114.358419,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_045",
+    "name": "幼儿园三分园消防栓旁",
+    "building": "幼儿园三分园",
+    "floor": "消防栓旁",
+    "room": "消防栓旁",
+    "status": "available",
+    "lat": 30.532557,
+    "lng": 114.357003,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_046",
+    "name": "樱园学生3舍值班室",
+    "building": "樱园学生3舍",
+    "floor": "值班室",
+    "room": "值班室",
+    "status": "available",
+    "lat": 30.54186,
+    "lng": 114.358433,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_047",
+    "name": "工学部学生1舍一楼大厅值班室",
+    "building": "工学部学生1舍",
+    "floor": "一楼大厅",
+    "room": "值班室",
+    "status": "available",
+    "lat": 30.544715,
+    "lng": 114.359408,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_048",
+    "name": "工学部学生2舍一楼大厅值班室",
+    "building": "工学部学生2舍",
+    "floor": "一楼",
+    "room": "大厅值班室",
+    "status": "available",
+    "lat": 30.544634,
+    "lng": 114.358948,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_049",
+    "name": "工学部学生3舍一楼大厅值班室",
+    "building": "工学部学生3舍",
+    "floor": "一楼大厅",
+    "room": "值班室",
+    "status": "available",
+    "lat": 30.544872,
+    "lng": 114.360599,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_050",
+    "name": "工学部4舍一楼进出口楼梯口",
+    "building": "工学部4舍",
+    "floor": "一楼",
+    "room": "进出口楼梯口",
+    "status": "available",
+    "lat": 30.544217,
+    "lng": 114.359903,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_051",
+    "name": "工学部5舍一楼进出口楼梯口",
+    "building": "工学部5舍",
+    "floor": "一楼",
+    "room": "进出口楼梯口",
+    "status": "available",
+    "lat": 30.544914,
+    "lng": 114.355808,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_052",
+    "name": "工学部6舍一楼进出口楼梯口",
+    "building": "工学部6舍",
+    "floor": "一楼",
+    "room": "进出口楼梯口",
+    "status": "available",
+    "lat": 30.544775,
+    "lng": 114.35628,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_053",
+    "name": "工学部学生7舍一楼大厅灭火器箱上方",
+    "building": "工学部学生7舍",
+    "floor": "一楼",
+    "room": "大厅灭火器箱上方",
+    "status": "available",
+    "lat": 30.546149,
+    "lng": 114.356042,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_054",
+    "name": "工学部学生9舍一楼进出口闸机旁",
+    "building": "工学部学生9舍",
+    "floor": "一楼",
+    "room": "进出口闸机旁",
+    "status": "available",
+    "lat": 30.546964,
+    "lng": 114.360331,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_055",
+    "name": "工学部学生10舍一楼大厅",
+    "building": "工学部学生10舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.547251,
+    "lng": 114.360342,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_056",
+    "name": "工学部学生三食堂一楼进出口洗手池旁",
+    "building": "工学部学生三食堂",
+    "floor": "一楼",
+    "room": "进出口洗手池旁",
+    "status": "available",
+    "lat": 30.545939,
+    "lng": 114.360776,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_057",
+    "name": "工学部学生12舍一楼大厅",
+    "building": "工学部学生12舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.546864,
+    "lng": 114.359779,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_058",
+    "name": "工学部15舍一楼进出口楼梯口",
+    "building": "工学部15舍",
+    "floor": "一楼",
+    "room": "进出口楼梯口",
+    "status": "available",
+    "lat": 30.543793,
+    "lng": 114.360583,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_059",
+    "name": "工学部16舍一楼进出口楼梯口",
+    "building": "工学部学生16舍",
+    "floor": "一楼",
+    "room": "进出口楼梯口",
+    "status": "available",
+    "lat": 30.543377,
+    "lng": 114.360744,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_060",
+    "name": "工学部17舍一楼进出口楼梯口",
+    "building": "工学部17舍",
+    "floor": "一楼",
+    "room": "进出口楼梯口",
+    "status": "available",
+    "lat": 30.543426,
+    "lng": 114.361327,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_061",
+    "name": "工学部新1舍一楼进出口楼梯口",
+    "building": "工学部新1舍",
+    "floor": "一楼",
+    "room": "进出口楼梯口",
+    "status": "available",
+    "lat": 30.544183,
+    "lng": 114.351345,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_062",
+    "name": "工学部新2舍",
+    "building": "工学部新2舍",
+    "floor": "一楼",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.545337,
+    "lng": 114.353489,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_063",
+    "name": "工学部1教一楼服务台后方",
+    "building": "工学部1教",
+    "floor": "一楼",
+    "room": "服务台后方",
+    "status": "available",
+    "lat": 30.546704,
+    "lng": 114.356853,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_064",
+    "name": "工学部4教一楼服务台后方",
+    "building": "工学部4教",
+    "floor": "一楼",
+    "room": "服务台后方",
+    "status": "available",
+    "lat": 30.54532,
+    "lng": 114.355814,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_065",
+    "name": "工学部5教东门一楼服务台后方",
+    "building": "工学部5教",
+    "floor": "东门一楼",
+    "room": "服务台后方",
+    "status": "available",
+    "lat": 30.545446,
+    "lng": 114.358134,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_066",
+    "name": "幼儿园二分园门柱子上",
+    "building": "幼儿园二分园门口",
+    "floor": "柱子上",
+    "room": "柱子上",
+    "status": "available",
+    "lat": 30.545796,
+    "lng": 114.352513,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_067",
+    "name": "武大二附小医务室内",
+    "building": "武大二附小",
+    "floor": "医务室内",
+    "room": "医务室内",
+    "status": "available",
+    "lat": 30.542318,
+    "lng": 114.352485,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_068",
+    "name": "工学部学生一食堂一楼进出口",
+    "building": "工学部学生一食堂",
+    "floor": "一楼",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.545374,
+    "lng": 114.360433,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_069",
+    "name": "樱园学生2舍进出口",
+    "building": "樱园学生2舍",
+    "floor": "进出口",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.541913,
+    "lng": 114.358406,
+    "open_hours": "06:30-23:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_070",
+    "name": "梅园2舍进出口",
+    "building": "梅园2舍",
+    "floor": "进出口",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.538855,
+    "lng": 114.358558,
+    "open_hours": "08:30-21:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "保安亭旁边，绿色AED标识",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_071",
+    "name": "梅园学生4/5舍一楼进出口",
+    "building": "梅园学生4/5舍",
+    "floor": "一楼",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.538662,
+    "lng": 114.359639,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_072",
+    "name": "枫园学生1舍二楼楼梯拐角",
+    "building": "枫园学生1舍",
+    "floor": "二楼",
+    "room": "楼梯拐角",
+    "status": "available",
+    "lat": 30.539468,
+    "lng": 114.365416,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_073",
+    "name": "枫园学生2舍一楼进出口外墙",
+    "building": "枫园学生2舍",
+    "floor": "一楼",
+    "room": "进出口外墙",
+    "status": "available",
+    "lat": 30.539698,
+    "lng": 114.365828,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_074",
+    "name": "枫园学生4舍一楼大厅门口",
+    "building": "枫园学生4舍",
+    "floor": "一楼",
+    "room": "大厅门口",
+    "status": "available",
+    "lat": 30.539548,
+    "lng": 114.367442,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_075",
+    "name": "枫园学生6舍一楼大厅门口",
+    "building": "枫园学生6舍",
+    "floor": "一楼",
+    "room": "大厅门口",
+    "status": "available",
+    "lat": 30.539271,
+    "lng": 114.368015,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_076",
+    "name": "枫园学生12舍一楼大厅",
+    "building": "枫园学生12舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.540004,
+    "lng": 114.3665,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_077",
+    "name": "枫园学生14舍1门一楼大厅",
+    "building": "枫园学生14舍",
+    "floor": "一楼",
+    "room": "1门大厅",
+    "status": "available",
+    "lat": 30.539304,
+    "lng": 114.364377,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_078",
+    "name": "枫园学生14舍2门一楼大厅",
+    "building": "枫园学生14舍",
+    "floor": "一楼",
+    "room": "2门大厅",
+    "status": "available",
+    "lat": 30.539239,
+    "lng": 114.363708,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_079",
+    "name": "枫园留学生3舍一楼大厅柱子上",
+    "building": "枫园留学生3舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.540263,
+    "lng": 114.365904,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_080",
+    "name": "湖滨学生1舍一楼门口",
+    "building": "湖滨学生1舍",
+    "floor": "一楼",
+    "room": "门口",
+    "status": "available",
+    "lat": 30.543349,
+    "lng": 114.364425,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_081",
+    "name": "湖滨学生2舍一楼大厅",
+    "building": "湖滨学生2舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.543382,
+    "lng": 114.365041,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_082",
+    "name": "湖滨学生3舍一楼大厅",
+    "building": "湖滨学生3舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.543376,
+    "lng": 114.365603,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_083",
+    "name": "湖滨学生6舍一楼大厅",
+    "building": "湖滨学生6舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.544227,
+    "lng": 114.365346,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_084",
+    "name": "湖滨学生7舍一楼值班室门口",
+    "building": "湖滨学生7舍",
+    "floor": "一楼",
+    "room": "值班室",
+    "status": "available",
+    "lat": 30.544227,
+    "lng": 114.365346,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_085",
+    "name": "湖滨学生8舍一楼大厅",
+    "building": "湖滨学生8舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.54525,
+    "lng": 114.365373,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_086",
+    "name": "湖滨学生9舍一楼大厅",
+    "building": "湖滨学生9舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.545076,
+    "lng": 114.364687,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_087",
+    "name": "湖滨学生11舍一楼大厅",
+    "building": "湖滨学生11舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.545378,
+    "lng": 114.36397,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_088",
+    "name": "湖滨学生10舍一楼大厅",
+    "building": "湖滨学生10舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.54478,
+    "lng": 114.364505,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_089",
+    "name": "湖滨学生12舍一楼大厅",
+    "building": "湖滨学生12舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.545058,
+    "lng": 114.363813,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_090",
+    "name": "湖滨学生13舍一楼大厅",
+    "building": "湖滨学生13舍",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.544439,
+    "lng": 114.364338,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_091",
+    "name": "湖滨学生14舍一楼大厅值班室",
+    "building": "湖滨学生14舍",
+    "floor": "一楼",
+    "room": "大厅值班室",
+    "status": "available",
+    "lat": 30.542909,
+    "lng": 114.365298,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_092",
+    "name": "湖滨学生17舍一单元旁共享洗烘中心门口",
+    "building": "湖滨学生17舍一单元",
+    "floor": "一楼",
+    "room": "共享洗烘中心",
+    "status": "available",
+    "lat": 30.54444,
+    "lng": 114.363422,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_093",
+    "name": "文理学部九区教工21栋值班室外墙",
+    "building": "文理学部九区教工21栋",
+    "floor": "一楼",
+    "room": "值班室",
+    "status": "available",
+    "lat": 30.533543,
+    "lng": 114.353092,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_094",
+    "name": "桂园学生2舍一楼进出口消防栓右侧",
+    "building": "桂园学生2舍",
+    "floor": "一楼",
+    "room": "进出口消防栓右侧",
+    "status": "available",
+    "lat": 30.541483,
+    "lng": 114.353263,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_095",
+    "name": "桂园学生5舍一楼进出口消防栓右侧",
+    "building": "桂园学生5舍",
+    "floor": "一楼",
+    "room": "进出口消防栓右侧",
+    "status": "available",
+    "lat": 30.541522,
+    "lng": 114.354001,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_096",
+    "name": "桂园学生3舍一楼进出口闸机旁",
+    "building": "桂园学生3舍",
+    "floor": "一楼",
+    "room": "闸机旁",
+    "status": "available",
+    "lat": 30.541522,
+    "lng": 114.354001,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_097",
+    "name": "桂园学生7舍一楼进出口",
+    "building": "桂园学生7舍",
+    "floor": "一楼",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.54221,
+    "lng": 114.353847,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_098",
+    "name": "桂园学生6舍一楼进出口",
+    "building": "桂园学生6舍",
+    "floor": "一楼",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.541924,
+    "lng": 114.353868,
+    "open_hours": "08:00-22:00",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_099",
+    "name": "文理学部1教一楼进出口",
+    "building": "文理学部1教",
+    "floor": "一楼",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.53959,
+    "lng": 114.359976,
+    "open_hours": "06:30-23:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_100",
+    "name": "文理学部2教一楼进出口后方",
+    "building": "文理学部2教",
+    "floor": "一楼",
+    "room": "进出口",
+    "status": "available",
+    "lat": 30.54124,
+    "lng": 114.356343,
+    "open_hours": "06:30-23:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_101",
+    "name": "文理学部3教一楼大厅内",
+    "building": "文理学部3教",
+    "floor": "一楼",
+    "room": "大厅",
+    "status": "available",
+    "lat": 30.541668,
+    "lng": 114.354952,
+    "open_hours": "06:30-23:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_102",
+    "name": "文理学部4教一楼大厅值班室",
+    "building": "文理学部4教",
+    "floor": "一楼",
+    "room": "大厅值班室",
+    "status": "available",
+    "lat": 30.539096,
+    "lng": 114.356371,
+    "open_hours": "06:30-23:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  },
+  {
+    "id": "whu_aed_103",
+    "name": "文理学部5教一楼值班工作台后方",
+    "building": "文理学部5教",
+    "floor": "一楼",
+    "room": "值班室",
+    "status": "available",
+    "lat": 30.538523,
+    "lng": 114.356049,
+    "open_hours": "06:30-23:30",
+    "device_model": "Philips HeartStart",
+    "last_inspection_at": "2025-11-04",
+    "accessibility": {
+      "ramp": false,
+      "elevator": false
+    },
+    "notes": "",
+    "photos": []
+  }
+]

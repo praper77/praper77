@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>纯色瓦片占位测试</title>
+  <link rel="stylesheet" href="assets/leaflet/leaflet.css"/>
+  <style>#map{height:70vh}</style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="assets/leaflet/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([30.541,114.36], 15);
+    const Solid = L.GridLayer.extend({
+      createTile: function(coords){
+        const tile = document.createElement('div');
+        const size = this.getTileSize();
+        tile.style.width = size.x + 'px';
+        tile.style.height = size.y + 'px';
+        tile.style.background = '#f0f5ff';
+        tile.style.border = '1px solid #e6efff';
+        return tile;
+      }
+    });
+    new Solid().addTo(map);
+    L.marker([30.541,114.36]).addTo(map).bindPopup('Leaflet OK（离线占位）').openPopup();
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>点位详情 - WHU AED</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="wrap">
+      <div class="brand"><div class="logo"></div><div class="title">点位详情</div></div>
+      <div class="nav-links">
+        <a href="map.html">地图</a>
+        <a href="emergency.html">紧急模式</a>
+        <a href="admin.html" class="cta">管理员</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div id="detail" class="card"><h2>加载中...</h2></div>
+
+    <dialog id="photoPreview" style="border:1px solid var(--border);border-radius:20px;padding:0;background:transparent">
+      <div class="card" style="padding:0;max-width:800px">
+        <img id="previewImg" alt="预览" style="width:100%;height:auto;border-radius:20px"/>
+        <div style="display:flex;justify-content:flex-end;gap:8px;padding:10px">
+          <button id="closePreview" class="btn">关闭</button>
+        </div>
+      </div>
+    </dialog>
+  </main>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async function(){
+      const params = new URLSearchParams(location.search);
+      const id = params.get('id');
+      const container = document.getElementById('detail');
+      const aeds = await loadAEDDataPreferLocal();
+      const p = aeds.find(x => String(x.id) === String(id));
+      if (!p) { container.innerHTML = '<h3>未找到该点位。</h3>'; return; }
+
+      const used = (p.used_count ?? 0);
+      const rescued = (p.rescued_count ?? '—');
+      const lastUsed = p.last_used_at ? ` · 最近一次使用：${p.last_used_at}` : '';
+
+      container.innerHTML = `
+        <h1>${p.name}</h1>
+        <p class="meta">建筑：${p.building||'—'} ${p.floor||''} ${p.room||''}</p>
+        <p>状态：<span class="chip ${p.status==='available'?'success':'gray'}">${p.status||'—'}</span> · 开放时间：${p.open_hours || '—'}</p>
+        <p>设备型号：${p.device_model || '—'} · 上次巡检：${p.last_inspection_at || '—'}</p>
+        <p>使用次数：${used} · 救助人数：${rescued}${lastUsed}</p>
+        ${p.notes ? `<p class="note">${p.notes}</p>` : ''}
+        <div class="tools">
+          <a class="btn primary" href="map.html#${encodeURIComponent(p.id)}">在地图中查看</a>
+          <a class="btn" href="admin.html#edit=${encodeURIComponent(p.id)}">编辑此点位</a>
+        </div>
+      `;
+    })();
+  </script>
+</body>
+</html>

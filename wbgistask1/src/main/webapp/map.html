@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>WHU AED 地图（高德底图 + 导航 + 筛选）</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <link rel="stylesheet" href="assets/leaflet/leaflet.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="wrap">
+      <div class="brand"><div class="logo"></div><div class="title">地图</div></div>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="emergency.html">紧急模式</a>
+        <a href="admin.html" class="cta">管理员</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="tools">
+      <button id="locateBtn" class="btn">定位我的位置</button>
+      <button id="navNearestBtn" class="btn accent">导航到最近 AED</button>
+      <button id="reloadBtn" class="btn">重新加载 AED 点位</button>
+    </div>
+
+    <div class="filters">
+      <input id="qInput" class="input" placeholder="搜索名称/建筑"/>
+      <select id="statusSel" class="select">
+        <option value="">全部状态</option>
+        <option value="available">available（可用）</option>
+        <option value="maintenance">maintenance（维护中）</option>
+      </select>
+      <input id="buildingInput" class="input" placeholder="按建筑筛选（如 图书馆）"/>
+      <button id="clearFiltersBtn" class="btn">清空筛选</button>
+    </div>
+    <div id="filterChips" class="filter-chips"></div>
+
+    <div class="map-wrap">
+      <div id="map" class="map" style="height:64vh"></div>
+    </div>
+
+    <div id="msg" class="warn" style="display:none"></div>
+
+    <!-- 分析开关（覆盖圈层 / 框选统计 / 覆盖查询与高亮） -->
+    <section class="card" style="margin-top:12px">
+      <details id="analysisToggle">
+        <summary style="cursor:pointer"><b>分析开关（覆盖圈层 / 框选统计 / 覆盖查询）</b></summary>
+        <div class="grid section" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+          <div class="card">
+            <h3>覆盖圈层</h3>
+            <div class="tools">
+              <label><input type="checkbox" id="coverageToggle"/> 显示覆盖圈</label>
+            </div>
+            <div class="tools" style="margin-top:8px">
+              <label class="meta" for="coverageRadius">半径（米）</label>
+              <input id="coverageRadius" class="input" type="number" min="30" max="300" step="10" value="100" style="max-width:140px"/>
+              <button id="coverageApplyBtn" class="btn">应用</button>
+              <span class="note" style="margin-left:8px">建议 100–150 m</span>
+            </div>
+            <p class="note" style="margin-top:8px">按当前筛选结果绘制所有覆盖圈。</p>
+          </div>
+
+          <div class="card">
+            <h3>框选统计</h3>
+            <div class="tools">
+              <button id="selectStartBtn" class="btn">开始框选（两次点击）</button>
+              <button id="selectClearBtn" class="btn">清除选择</button>
+            </div>
+            <p class="note" style="margin-top:8px">第一次点击起点，第二次点击对角点，统计范围内点位。</p>
+            <div id="selectionStats" class="meta" style="margin-top:8px; line-height:1.9"></div>
+          </div>
+
+          <!-- 新增：覆盖查询与高亮 -->
+          <div class="card">
+            <h3>覆盖查询与高亮</h3>
+            <div class="tools">
+              <label><input type="checkbox" id="clickCoverageToggle" checked/> 点击点位时显示覆盖圈</label>
+            </div>
+            <div class="tools" style="margin-top:8px">
+              <label class="meta" for="clickCoverageRadius">覆盖半径（米）</label>
+              <input id="clickCoverageRadius" class="input" type="number" min="30" max="300" step="10" value="100" style="max-width:140px"/>
+              <button id="clearHighlightBtn" class="btn">清除高亮</button>
+            </div>
+            <div class="tools" style="margin-top:8px">
+              <button id="myCoverageBtn" class="btn accent">查询“我的位置”是否覆盖</button>
+              <button id="centerCoverageBtn" class="btn">查询“地图中心”是否覆盖</button>
+            </div>
+            <p class="note" style="margin-top:8px">将显示覆盖内 AED 清单，未覆盖则提示最近 AED。</p>
+            <div id="coverageQueryStats" class="meta" style="margin-top:8px; line-height:1.9"></div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <div id="navPanel" class="card" style="display:none; margin-top:12px">
+      <h3>导航信息</h3>
+      <p><b>最近 AED：</b><span id="navName">—</span></p>
+      <p class="meta"><b>直线距离：</b><span id="navDist">—</span> · <b>预计步行：</b><span id="navETA">—</span></p>
+      <div class="tools">
+        <a id="navGaodeLink" class="btn primary" target="_blank" rel="noopener">在高德打开步行导航</a>
+        <button id="clearRouteBtn" class="btn">清除临时路线</button>
+      </div>
+      <p class="note">注：页面内的线路为直线示意，实际步行路径以导航应用为准。</p>
+    </div>
+
+    <p class="note">点位以 WGS84 存储；渲染到高德底图时前端自动转换为 GCJ‑02。</p>
+  </main>
+
+  <script src="assets/leaflet/leaflet.js"></script>
+  <script src="assets/map-enhanced.js"></script>
+</body>
+</html>

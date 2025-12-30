@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title data-i18n="emergency.title">紧急模式</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body class="emergency">
+  <nav class="navbar">
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo"></div><div class="title" data-i18n="emergency.title">紧急模式</div>
+      </div>
+      <div class="nav-links">
+        <a href="map.html" data-i18n="common.map">地图</a>
+        <a href="admin.html" data-i18n="common.admin">管理员</a>
+        <!-- Language switch -->
+        <button class="btn" data-lang="zh">ZH</button>
+        <button class="btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="hero">
+      <div class="heading"><span class="dot"></span><h2 style="margin:0" data-i18n="emergency.hero">如遇心脏骤停：请立即呼救并开始胸外按压</h2></div>
+      <div class="big-actions">
+        <a class="btn btn-primary-red" href="tel:120" data-i18n="emergency.call120">拨打 120</a>
+        <!-- 加 id，便于绑定点击计数；href 仍保留为原有 map.html#nav 作为兜底 -->
+        <a id="emNavNearestBtn" class="btn accent" href="map.html#nav" data-i18n="emergency.navNearest">导航到最近 AED</a>
+      </div>
+
+      <div class="metronome">
+        <div class="beat" id="beat"></div>
+        <button class="btn" id="metronome-toggle" data-i18n="emergency.metronome" data-i18n-vars='{"bpm":100}'>节拍器（100 BPM）</button>
+        <select class="select" id="bpm-sel" style="max-width:140px">
+          <option value="100">100 BPM</option>
+          <option value="110">110 BPM</option>
+          <option value="120">120 BPM</option>
+        </select>
+        <button class="btn" id="vibrate-toggle" data-i18n="emergency.vibrateOn">振动：开</button>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3><span class="card-icon">🧭</span><span data-i18n="emergency.steps1Title">1. 评估与呼救</span></h3>
+          <p data-i18n="emergency.steps1Text">确认环境安全，评估意识与呼吸。立即呼救并拨打急救电话。</p>
+        </div>
+        <div class="card">
+          <h3><span class="card-icon">🤲</span><span data-i18n="emergency.steps2Title">2. 胸外按压</span></h3>
+          <p data-i18n="emergency.steps2Text">双手交叠置于胸骨中央，频率 100–120 次/分钟，深度约 5–6 厘米。</p>
+        </div>
+        <div class="card">
+          <h3><span class="card-icon">⚡</span><span data-i18n="emergency.steps3Title">3. 连接 AED</span></h3>
+          <p data-i18n="emergency.steps3Text">连接电极片，遵循设备语音/屏幕指示，清离患者进行除颤。</p>
+        </div>
+        <div class="card">
+          <h3><span class="card-icon">📷</span><span data-i18n="emergency.steps4Title">4. 关键提示</span></h3>
+          <p data-i18n="emergency.steps4Text">持续按压，切勿长时间中断按压去寻找设备；有人就近取 AED。</p>
+        </div>
+      </div>
+
+      <p class="note" style="margin-top:8px" data-i18n="emergency.note">提示：节拍器支持振动与 BPM 微调，仅用于演示，实际急救请遵循专业指引。</p>
+    </div>
+  </main>
+
+  <script>
+    let timer=null, bpm=100, vibrateOn=true;
+    const toggleBtn = document.getElementById('metronome-toggle');
+    const bpmSel = document.getElementById('bpm-sel');
+    const vibrateBtn = document.getElementById('vibrate-toggle');
+
+    function tick(){ if (vibrateOn && navigator.vibrate) navigator.vibrate(40); }
+    function start(){ stop(); const interval = 60000 / bpm; tick(); timer = setInterval(tick, interval); toggleBtn.dataset.i18n = 'emergency.stopMetronome'; toggleBtn.dataset.i18nVars = JSON.stringify({ bpm }); toggleBtn.textContent = `停止节拍器（${bpm} BPM）`; window.i18n && window.i18n.loadBundle(window.i18n.getLang()).then(b=> window.i18n.applyI18n(b)); }
+    function stop(){ if (timer){ clearInterval(timer); timer=null; toggleBtn.dataset.i18n = 'emergency.metronome'; toggleBtn.dataset.i18nVars = JSON.stringify({ bpm }); toggleBtn.textContent = `节拍器（${bpm} BPM）`; window.i18n && window.i18n.loadBundle(window.i18n.getLang()).then(b=> window.i18n.applyI18n(b)); } }
+    toggleBtn.addEventListener('click', ()=>{ if (timer) stop(); else start(); });
+    bpmSel.addEventListener('change', ()=>{ bpm = Number(bpmSel.value)||100; if (timer){ start(); } else { stop(); } });
+    vibrateBtn.addEventListener('click', ()=>{
+      vibrateOn = !vibrateOn;
+      vibrateBtn.dataset.i18n = vibrateOn ? 'emergency.vibrateOn' : 'emergency.vibrateOff';
+      vibrateBtn.textContent = vibrateOn ? '振动：开' : '振动：关';
+      window.i18n && window.i18n.loadBundle(window.i18n.getLang()).then(b=> window.i18n.applyI18n(b));
+    });
+  </script>
+
+  <script src="assets/i18n.js"></script>
+  <script>
+    (function(){
+      const zhBtn = document.querySelector('[data-lang="zh"]');
+      const enBtn = document.querySelector('[data-lang="en"]');
+      async function switchLang(lang){
+        try {
+          window.i18n.setLang(lang);
+          const bundle = await window.i18n.loadBundle(lang);
+          window.i18n.applyI18n(bundle);
+          [zhBtn, enBtn].forEach(b => b && b.classList.toggle('primary', b.dataset.lang === lang));
+        } catch(e) {
+          console.warn('Lang switch failed', e);
+        }
+      }
+      zhBtn && zhBtn.addEventListener('click', ()=> switchLang('zh'));
+      enBtn && enBtn.addEventListener('click', ()=> switchLang('en'));
+    })();
+  </script>
+
+  <!-- 紧急模式导航计次：点击“导航到最近 AED”时，定位→选最近→打开高德导航，并本地+1；失败则退回 map.html#nav -->
+  <script>
+    (function(){
+      const btn = document.getElementById('emNavNearestBtn');
+      if (!btn) return;
+
+      // 本地使用累计（与地图页同一 key，60 秒内不重复）
+      function getStats(){ try { return JSON.parse(localStorage.getItem('aed_usage_stats')||'{}'); } catch { return {}; } }
+      function saveStats(stats){ localStorage.setItem('aed_usage_stats', JSON.stringify(stats)); }
+      function markUsed(aedId){
+        if (!aedId) return;
+        const stats = getStats();
+        const now = Date.now();
+        const last = stats[aedId]?.last_ts || 0;
+        if (now - last < 60*1000) return;
+        const cnt = (stats[aedId]?.count || 0) + 1;
+        stats[aedId] = { count: cnt, last_ts: now };
+        saveStats(stats);
+      }
+
+      // WGS84 -> GCJ-02（为高德导航生成坐标）
+      function outOfChina(lng, lat){ return (lng < 72.004 || lng > 137.8347 || lat < 0.8293 || lat > 55.8271); }
+      function transformLat(x, y){ let ret = -100 + 2*x + 3*y + 0.2*y*y + 0.1*x*y + 0.2*Math.sqrt(Math.abs(x));
+        ret += (20*Math.sin(6*x*Math.PI) + 20*Math.sin(2*x*Math.PI)) * 2/3;
+        ret += (20*Math.sin(y*Math.PI) + 40*Math.sin(y/3*Math.PI)) * 2/3;
+        ret += (160*Math.sin(y/12*Math.PI) + 320*Math.sin(y/30*Math.PI)) * 2/3; return ret; }
+      function transformLng(x, y){ let ret = 300 + x + 2*y + 0.1*x*x + 0.1*x*y + 0.1*Math.sqrt(Math.abs(x));
+        ret += (20*Math.sin(6*x*Math.PI) + 20*Math.sin(2*x*Math.PI)) * 2/3;
+        ret += (20*Math.sin(x*Math.PI) + 40*Math.sin(x/3*Math.PI)) * 2/3;
+        ret += (150*Math.sin(x/12*Math.PI) + 300*Math.sin(x/30*Math.PI)) * 2/3; return ret; }
+      function wgs84ToGcj02(lng, lat){
+        if (outOfChina(lng, lat)) return [lng, lat];
+        const a=6378245.0, ee=0.00669342162296594323;
+        let dLat = transformLat(lng-105.0, lat-35.0);
+        let dLng = transformLng(lng-105.0, lat-35.0);
+        const radLat = lat/180.0*Math.PI;
+        let magic = Math.sin(radLat); magic = 1 - ee*magic*magic;
+        const sqrtMagic = Math.sqrt(magic);
+        dLat = (dLat*180.0)/((a*(1-ee))/(magic*sqrtMagic)*Math.PI);
+        dLng = (dLng*180.0)/(a/ sqrtMagic * Math.cos(radLat)*Math.PI);
+        return [lng + dLng, lat + dLat];
+      }
+
+      function haversine(lat1, lon1, lat2, lon2){
+        const toRad = d => d * Math.PI / 180, R = 6371;
+        const dLat = toRad(lat2-lat1), dLon = toRad(lon2-lon1);
+        const a = Math.sin(dLat/2)**2 + Math.cos(toRad(lat1))*Math.cos(toRad(lat2))*Math.sin(dLon/2)**2;
+        return 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)) * R;
+      }
+
+      async function loadAeds(){
+        // 优先管理员本地数据（若你 admin 页面写入到 localStorage），否则读 data/aed.json
+        try {
+          const raw = localStorage.getItem('aed_admin_data');
+          if (raw) {
+            const list = JSON.parse(raw);
+            if (Array.isArray(list) && list.length) return list;
+          }
+        } catch {}
+        const res = await fetch('data/aed.json', { cache:'no-cache' });
+        return await res.json();
+      }
+
+      btn.addEventListener('click', async (e)=>{
+        try {
+          e.preventDefault();
+
+          if (!('geolocation' in navigator)) { location.href = btn.href; return; }
+
+          // 定位
+          const pos = await new Promise((resolve, reject)=>{
+            navigator.geolocation.getCurrentPosition(resolve, reject, { enableHighAccuracy:true, timeout:8000 });
+          });
+          const uLat = pos.coords.latitude;
+          const uLng = pos.coords.longitude;
+
+          // 数据与最近点
+          const list = await loadAeds();
+          if (!Array.isArray(list) || list.length===0) { location.href = btn.href; return; }
+          const candidates = list.filter(p=> p && p.lat!=null && p.lng!=null && p.status!=='maintenance');
+          if (candidates.length===0) { location.href = btn.href; return; }
+          const sorted = candidates.map(p=> ({ ...p, _km: haversine(uLat, uLng, p.lat, p.lng) }))
+                                   .sort((a,b)=> a._km - b._km);
+          const target = sorted[0];
+
+          // 构建高德导航外链（GCJ-02）
+          const uGCJ = wgs84ToGcj02(uLng, uLat);
+          const tGCJ = wgs84ToGcj02(target.lng, target.lat);
+          const o = `${uGCJ[0]},${uGCJ[1]}`;
+          const d = `${tGCJ[0]},${tGCJ[1]}`;
+          const url = `https://uri.amap.com/navigation?from=${o}&to=${d}&mode=walk&src=whu_aed&callnative=0`;
+
+          // 计一次使用
+          markUsed(String(target.id||''));
+
+          // 打开导航（新窗口/标签），并保底回退当前页到 map.html#nav
+          window.open(url, '_blank');
+        } catch (err){
+          // 任意步骤失败：回退到原有逻辑
+          location.href = btn.href;
+        }
+      });
+    })();
+  </script>
+
+  <!-- keep your existing emergency inline script after this -->
+</body>
+</html>

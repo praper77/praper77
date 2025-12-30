@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>AED 数据分析仪表盘</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="wrap">
+      <div class="brand"><div class="logo"></div><div class="title">数据分析</div></div>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="map.html">地图</a>
+        <a href="admin.html" class="cta">管理员</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="grid">
+      <div class="card">
+        <h2>总体概览</h2>
+        <ul id="summary" class="meta" style="list-style: none; padding-left: 0; line-height:1.9"></ul>
+      </div>
+
+      <div class="card">
+        <h2>状态分布</h2>
+        <ul id="byStatus" class="meta" style="list-style: none; padding-left: 0; line-height:1.9"></ul>
+      </div>
+    </section>
+
+    <section class="grid section">
+      <div class="card">
+        <h2>建筑 Top 10（按点位数量）</h2>
+        <ol id="topBuildings" class="meta" style="padding-left: 20px; line-height:1.9"></ol>
+      </div>
+
+      <div class="card">
+        <h2>数据新鲜度</h2>
+        <p class="note">依据 last_inspection_at 判断，超过 180 天视为“需复核”。</p>
+        <ul id="freshness" class="meta" style="list-style: none; padding-left: 0; line-height:1.9"></ul>
+      </div>
+    </section>
+
+    <section class="card section">
+      <h2>说明与后续</h2>
+      <ul class="meta" style="line-height:1.9">
+        <li>本页仅做基础统计与质量评估；覆盖圈层、网格分布、热力等空间分析将于后续“分析图层”上线（地图内叠加）。</li>
+        <li>若你在管理员页面进行了本地编辑，本页优先使用“管理员本地数据”。</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async function(){
+      async function loadPrefer(){
+        if (typeof loadAEDDataPreferLocal === 'function') {
+          try { return await loadAEDDataPreferLocal(); } catch {}
+        }
+        try { const r = await fetch('data/aed.json', { cache: 'no-cache' }); return await r.json(); } catch { return []; }
+      }
+      const list = await loadPrefer();
+      const items = Array.isArray(list) ? list : [];
+
+      // 统计
+      const total = items.length;
+      const byStatus = items.reduce((acc, p) => { const s=(p.status||'unknown'); acc[s]=(acc[s]||0)+1; return acc; }, {});
+      const byBuilding = items.reduce((acc, p)=>{ const b=(p.building||'未标注建筑'); acc[b]=(acc[b]||0)+1; return acc; }, {});
+      const buildingsSorted = Object.entries(byBuilding).sort((a,b)=> b[1]-a[1]).slice(0,10);
+
+      // 新鲜度（last_inspection_at 超过 180 天）
+      function daysBetween(d){
+        try {
+          const dt = new Date(d);
+          if (isNaN(dt.getTime())) return null;
+          return Math.floor((Date.now() - dt.getTime()) / (1000*60*60*24));
+        } catch { return null; }
+      }
+      const freshness = { ok:0, warn:0, missing:0 };
+      items.forEach(p=>{
+        const days = daysBetween(p.last_inspection_at);
+        if (days === null) freshness.missing++;
+        else if (days > 180) freshness.warn++;
+        else freshness.ok++;
+      });
+
+      // 渲染
+      document.getElementById('summary').innerHTML = `
+        <li>当前点位总数：<b>${total}</b></li>
+        <li>建筑数（去重）：<b>${Object.keys(byBuilding).length}</b></li>
+      `;
+
+      const statusLines = Object.entries(byStatus)
+        .sort((a,b)=> b[1]-a[1])
+        .map(([s,c]) => `<li>${s}：<b>${c}</b></li>`)
+        .join('');
+      document.getElementById('byStatus').innerHTML = statusLines || '<li>暂无状态统计。</li>';
+
+      document.getElementById('topBuildings').innerHTML = buildingsSorted
+        .map(([b,c]) => `<li>${b}：<b>${c}</b></li>`).join('') || '<li class="meta">暂无建筑统计。</li>';
+
+      document.getElementById('freshness').innerHTML = `
+        <li>180 天内已巡检：<b>${freshness.ok}</b></li>
+        <li>超过 180 天需复核：<b>${freshness.warn}</b></li>
+        <li>缺少巡检日期：<b>${freshness.missing}</b></li>
+      `;
+    })();
+  </script>
+</body>
+</html>

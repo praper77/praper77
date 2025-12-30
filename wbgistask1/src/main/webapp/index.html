@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>WHU AED 门户 · 使用者</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="wrap">
+      <div class="brand"><div class="logo"></div><div class="title">WHU AED</div></div>
+      <div class="nav-links">
+        <a href="map.html">地图</a>
+        <a href="emergency.html">紧急模式</a>
+        <a href="admin.html" class="cta">管理员模式</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- 使用者：正常情况 -->
+    <section class="grid">
+      <div class="card">
+        <h1>正常使用 · 查看与导航</h1>
+        <p class="meta">打开地图，浏览附近 AED 点位，获取步行导航。</p>
+        <div class="tools">
+          <a class="btn primary" href="map.html">打开地图</a>
+          <a class="btn" href="map.html#nav">导航到最近 AED</a>
+        </div>
+      </div>
+
+      <!-- 使用者：紧急情况 -->
+      <div class="card">
+        <h1>紧急情况 · 急救指引</h1>
+        <p class="meta">拨打 120、节拍器、急救步骤，一键导航到最近 AED。</p>
+        <div class="tools">
+          <a class="btn danger" href="emergency.html">进入紧急模式</a>
+          <a class="btn" href="map.html#nav">在地图中导航最近 AED</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 快捷：离你最近的 AED（基于当前已导入的数据） -->
+    <section class="section">
+      <div class="card">
+        <h2>离你最近的 AED</h2>
+        <div id="nearest-list" class="grid"></div>
+        <p class="note">注：若当前数据未完整，近邻结果基于已导入的部分点位。</p>
+      </div>
+    </section>
+
+    <!-- 管理员入口（仅入口，不在首页展示管理员功能） -->
+    <section class="section">
+      <div class="card">
+        <h3>管理员模式</h3>
+        <p class="meta">数据维护与分析功能请在管理员模式中使用。</p>
+        <div class="tools">
+          <a class="btn" href="admin.html">进入管理员模式</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async function(){
+      try {
+        const hasPrefer = typeof loadAEDDataPreferLocal === 'function';
+        const aeds = hasPrefer ? await loadAEDDataPreferLocal() : await (await fetch('data/aed.json', { cache:'no-cache' })).json();
+        const list = Array.isArray(aeds) ? aeds : [];
+        const container = document.getElementById('nearest-list');
+
+        if (!('geolocation' in navigator)) {
+          container.innerHTML = '<div class="note">设备不支持定位，请打开地图浏览全部点位。</div>';
+          return;
+        }
+        navigator.geolocation.getCurrentPosition(pos => {
+          if (list.length === 0) {
+            container.innerHTML = '<div class="note">当前数据较少，建议先导入更多点位。</div>';
+            return;
+          }
+          const { latitude, longitude } = pos.coords;
+          const H = (typeof haversine === 'function') ? haversine : function(lat1, lon1, lat2, lon2){
+            const toRad = d => d * Math.PI / 180, R = 6371;
+            const dLat = toRad(lat2-lat1), dLon = toRad(lon2-lon1);
+            const a = Math.sin(dLat/2)**2 + Math.cos(toRad(lat1))*Math.cos(toRad(lat2))*Math.sin(dLon/2)**2;
+            return 2*R*Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+          };
+          const withDist = list.map(p => ({ ...p, distance: H(latitude, longitude, p.lat, p.lng)}))
+                               .sort((a,b) => a.distance - b.distance)
+                               .slice(0,3);
+          container.innerHTML = withDist.map(p => `
+            <div class="card">
+              <h3>${p.name}</h3>
+              <div class="meta">约 ${p.distance.toFixed(2)} km · 状态：
+                <span class="chip ${p.status==='available'?'success':'gray'}">${p.status}</span>
+              </div>
+              <div class="tools">
+                <a class="btn" href="details.html?id=${encodeURIComponent(p.id)}">详情</a>
+                <a class="btn accent" href="map.html#${encodeURIComponent(p.id)}">地图中查看</a>
+              </div>
+            </div>
+          `).join('');
+        }, () => {
+          container.innerHTML = '<div class="note">定位失败，请在地图页查看全部点位。</div>';
+        }, { enableHighAccuracy: true, timeout: 8000 });
+      } catch (e) {
+        console.warn('nearest init failed', e);
+        document.getElementById('nearest-list').innerHTML = '<div class="note">加载数据失败，请稍后重试或在管理员模式中导入数据。</div>';
+      }
+    })();
+  </script>
+</body>
+</html>

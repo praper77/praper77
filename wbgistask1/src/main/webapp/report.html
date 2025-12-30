@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>上报设备问题 - WHU AED</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="wrap">
+      <div class="brand"><div class="logo"></div><div class="title">上报问题</div></div>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="map.html">地图</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="card">
+      <h3>上报设备问题</h3>
+      <div class="grid" style="grid-template-columns:repeat(2, minmax(220px,1fr))">
+        <div><label>点位ID<input id="f_id" class="input" placeholder="如 whu_aed_045"/></label></div>
+        <div><label>联系方式（可选）<input id="f_contact" class="input" placeholder="邮箱或电话"/></label></div>
+        <div style="grid-column:1/3"><label>问题描述<textarea id="f_desc" class="input" rows="4" placeholder="设备缺失/损坏/无法开启等"></textarea></label></div>
+      </div>
+      <div class="tools">
+        <button id="submitBtn" class="btn primary">提交</button>
+      </div>
+      <p class="note">课程作业示例：数据暂存于本机浏览器，不会上传服务器。</p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', ()=>{
+      const id = document.getElementById('f_id').value.trim();
+      const contact = document.getElementById('f_contact').value.trim();
+      const desc = document.getElementById('f_desc').value.trim();
+      if (!id || !desc) { alert('请填写点位ID与问题描述'); return; }
+      const list = JSON.parse(localStorage.getItem('aed_reports') || '[]');
+      list.push({ id, contact, desc, ts: new Date().toISOString() });
+      localStorage.setItem('aed_reports', JSON.stringify(list));
+      alert('提交成功！已保存在本机浏览器的“上报记录”中。');
+      document.getElementById('f_id').value = '';
+      document.getElementById('f_contact').value = '';
+      document.getElementById('f_desc').value = '';
+    });
+  </script>
+</body>
+</html>
